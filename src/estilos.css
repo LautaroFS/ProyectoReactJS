@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-image: url(https://us.123rf.com/450wm/nicemonkey/nicemonkey0911/nicemonkey091100036/5890497-oscuridad-cepillado-de-metal-con-orificio-redondo-pu%C3%B1etazos-en-ella.jpg?ver=6);
+}
+
+header {
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(184, 78, 29);
+    margin: 1rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+header nav {
+    margin-bottom: 2rem;
+}
+
+header nav a {
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+
+
+main {
+    border: black solid 2px;
+    background-color: rgb(184, 78, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+main div {
+    margin-bottom: 0.5rem;
+}
+
+/* --------------------------------- BOMBAS --------------------------------- */
+#bombasDeAgua {
+    margin-bottom: 6px;
+}
+
+#bombas {
+    display: flex;
+    flex-direction: row;
+}
+
+#bombas div {
+    margin-left: 5px;
+    height: 14rem;
+    width: 14rem;
+    border: solid black 1px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+/* ------------------------------- FERRETERIA ------------------------------- */
+
+#ferreteria1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#ferreteria1 div {
+    margin-left: 5px;
+    height: 14rem;
+    width: 14rem;
+    border: solid black 1px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+/* -------------------------------- CAÑERIAS -------------------------------- */
+
+#cañerias1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#cañerias1 div {
+    margin-left: 5px;
+    height: 14rem;
+    width: 14rem;
+    border: solid black 1px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 4rem;
+    margin: 1rem;
+    border: 1px solid black;
+    background-color: rgb(184, 78, 29);
+}
+
+footer a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: black;
+}
