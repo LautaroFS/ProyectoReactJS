@@ -1,6 +1,6 @@
-import Bombas from "./Bombas"
-import Ferreteria from "./Ferreteria"
-import Cañerias from "./Cañerias"
+import Bombas from "./productos/Bombas"
+import Ferreteria from "./productos/Ferreteria"
+import Cañerias from "./productos/Cañerias"
 
 const Main = () => {
     return(
