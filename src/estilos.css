@@ -45,7 +45,7 @@ main div {
     margin-bottom: 0.5rem;
 }
 
-.btnAgregar{
+.btn{
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -85,7 +85,7 @@ main div {
 
 #ferreteria1 div {
     margin-left: 5px;
-    height: 14rem;
+    height: 21rem;
     width: 14rem;
     border: solid black 1px;
     border-radius: 1px;
@@ -106,7 +106,7 @@ main div {
 
 #cañerias1 div {
     margin-left: 5px;
-    height: 14rem;
+    height: 21rem;
     width: 14rem;
     border: solid black 1px;
     border-radius: 1px;

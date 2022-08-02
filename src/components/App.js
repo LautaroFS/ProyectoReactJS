@@ -1,16 +1,11 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import Main from "./Main"
+import ItemListContainer from "./ItemListContainer/ItemListContainer";
 
-
-const App = () => {  
-    return (
+const App = () => {
+    return(
         <>
-            <Header/>
-            <Main/>
-            <Footer type="footer"/> 
+        <ItemListContainer/>
         </>
     )
 }
 
-export default App;
+export default App
