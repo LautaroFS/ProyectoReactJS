@@ -2,8 +2,8 @@ const Nav = (tipo) => {
     if(tipo.type === "header"){
         return(
             <nav>
-                <a href="#bombasDeAgua">Bombas</a>
-                <a href="#ferreteria">Ferreteria</a>
+                <a href="#bombas">Bombas</a>
+                <a href="#herramientas">Herramientas</a>
                 <a href="#cañerias">Cañerias</a>
             </nav>
             )

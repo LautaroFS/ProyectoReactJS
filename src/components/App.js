@@ -1,9 +1,14 @@
-import ItemListContainer from "./ItemListContainer/ItemListContainer";
+import Footer from "./Footer"
+import Header from "./Header"
+import Main from "./Main"
 
-const App = () => {
-    return(
+
+const App = () => {  
+    return (
         <>
-        <ItemListContainer/>
+            <Header greeting1="Santiago"/>
+            <Main/>
+            <Footer type="footer"/> 
         </>
     )
 }
