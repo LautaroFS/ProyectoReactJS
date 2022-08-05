@@ -54,8 +54,8 @@ main div {
 
 .prod {
     margin-left: 5px;
-    height: 25rem;
-    width: 16rem;
+    height: 33rem;
+    width: 20rem;
     border: solid black 1px;
     border-radius: 1px;
     display: flex;
@@ -68,6 +68,10 @@ main div {
     margin-top: 3rem;
 }
 
+.imagenes{
+    height: 8rem;
+    width: 8rem;
+}
 
 /* --------------------------------- FOOTER --------------------------------- */
 
