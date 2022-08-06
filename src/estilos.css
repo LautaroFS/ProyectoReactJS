@@ -83,7 +83,7 @@ footer{
     justify-content: center;
     height: 4rem;
     margin: 1rem;
-    border: 1px solid black;
+    border: solid black 2px;
     background-color: rgb(184, 78, 29);
 }
 

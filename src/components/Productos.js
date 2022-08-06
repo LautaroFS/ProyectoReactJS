@@ -34,7 +34,7 @@ const productoBaseDeDatos = [
     {
         id : "cañerias",
         nombre : "Caño termofusion 1/2 20Mm Agua Fria/Caliente",
-        imagen : "https://ar.stanleytools.global/LAG/PRODUCT/IMAGES/HIRES/70-488/70-488_02.jpg?resize=530x530",
+        imagen : "https://http2.mlstatic.com/D_795948-MLA47007929246_082021-O.webp",
         descripcion : "El mejor caño para la instalacion de agua en tu hogar.",
         precio : 980,
         stock : 6
