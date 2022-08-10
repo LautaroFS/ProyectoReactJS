@@ -1,6 +1,6 @@
-import ItemList from "./ItemsList"
+import ItemList from "./ItemList/ItemsList"
 import { useEffect, useState } from "react"
-import productoBaseDeDatos from "./Productos"
+import productoBaseDeDatos from "../Productos"
 
 const ItemListContainer = () => {
 
@@ -11,7 +11,7 @@ const ItemListContainer = () => {
         const peticion = new Promise((resolve, reject) => {
             setTimeout(()=>{
                 resolve(productoBaseDeDatos)
-            },3500)
+            },1500)
         })
         peticion.then((correcto)=>{
             setProductos(correcto)

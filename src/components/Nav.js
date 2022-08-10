@@ -1,3 +1,5 @@
+
+
 const Nav = (tipo) => {
     if(tipo.type === "header"){
         return(
