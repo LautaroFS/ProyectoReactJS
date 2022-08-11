@@ -1,7 +1,6 @@
 import Contador from "../../Contador"
 
 const ItemDetail = ({products}) =>{
-    console.log(products)
     return(
         <div className="prod">
             <h4>{products.nombre}</h4>
