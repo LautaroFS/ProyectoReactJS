@@ -15,16 +15,18 @@ const ItemDetailContainer = () => {
         customFetch(productoBaseDeDatos)
         .then(res=>{
             setCarga(false)
-            setProduct(res.find(products => r.key === products.key))
+            setProduct(res.find(products => r.codigo === products.codigo))
         })
-    },[r.key])
+    },[r.codigo])
     if(carga){
         return(
             <h3>Cargando...</h3>
         )
-    }else(
+    }else{
+        return(
         <ItemDetail products={products}/>
-    )
+        )
+    }
 }
 
 export default ItemDetailContainer
