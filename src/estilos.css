@@ -48,8 +48,7 @@ main div {
 }
 
 .btn{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
 .prod {
@@ -88,7 +87,6 @@ main div {
     border-radius: 2px;
     color: white;
 }
-
 
 /* --------------------------------- FOOTER --------------------------------- */
 
