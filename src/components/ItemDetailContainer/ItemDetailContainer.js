@@ -4,7 +4,7 @@ import ItemDetail from "./ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
 import customFetch from "../CustomFetch";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({sumaCarrito}) => {
 
     const r = useParams()
     const [products, setProduct] = useState({})
