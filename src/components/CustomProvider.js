@@ -8,8 +8,6 @@ const CustomProvider = (props) =>{
     const [cantidad, setCantidad] = useState(0)
 
     const sumarProductos = (produc) =>{
-        console.log("Hola")
-        console.log(produc)
         setCantidad(cantidad + produc.cantidad);
     }
 
