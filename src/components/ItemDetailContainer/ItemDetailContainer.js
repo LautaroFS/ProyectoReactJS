@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import productoBaseDeDatos from "../Productos"
 import ItemDetail from "./ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
-import customFetch from "../CustomFetch";
+import {customFetch, customFetch1} from "../CustomFetch";
 
 const ItemDetailContainer = ({sumaCarrito}) => {
 
@@ -18,6 +18,7 @@ const ItemDetailContainer = ({sumaCarrito}) => {
             setProduct(res.find(products => r.id == products.id))
         })
     },[r.id])
+
     if(carga){
         return(
             <h3>Cargando...</h3>

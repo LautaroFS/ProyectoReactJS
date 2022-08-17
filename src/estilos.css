@@ -24,13 +24,23 @@ header nav {
     margin-bottom: 2rem;
 }
 
-header nav a {
+header nav div a {
     align-items: center;
     margin-left: 1rem;
     margin-right: 1rem;
     color: black;
 }
 
+.cart{
+    margin: 1.5rem;
+}
+
+.cart1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .general {

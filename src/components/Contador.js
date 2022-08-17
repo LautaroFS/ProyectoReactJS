@@ -1,17 +1,16 @@
 import {useState} from "react"; 
 import { Button } from "react-bootstrap";
 
-const Contador = (props , {contadorPadre , sumaCarrito}) =>{
+const Contador = (props) =>{
     
     const [contadorHijo, setContadorHijo] = useState(props.initial)
-    const [confirmed, setConfirmed] = useState(false) 
 
      const sumar = () =>{
         if(contadorHijo<props.stock){
             setContadorHijo(contadorHijo+1)
         }
     }
-
+    
     const restar = () =>{
         if(contadorHijo>props.initial){
             setContadorHijo(contadorHijo-1)
@@ -19,7 +18,9 @@ const Contador = (props , {contadorPadre , sumaCarrito}) =>{
     }
 
     const confirmar = () =>{
-        sumaCarrito(contadorHijo)
+        props.sumaCarrito(contadorHijo)
+        setContadorHijo(0)
+        props.onAdd(contadorHijo)
     }
     return(
         <>

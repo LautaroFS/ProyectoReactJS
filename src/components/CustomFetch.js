@@ -1,5 +1,5 @@
 
-const customFetch = (productoBaseDeDatos) =>{
+export const customFetch = (productoBaseDeDatos) =>{
     return new Promise((res, reje) => {
         setTimeout(()=>{
             res(productoBaseDeDatos)
@@ -7,4 +7,4 @@ const customFetch = (productoBaseDeDatos) =>{
     })
 }
 
-export default customFetch
+

@@ -1,12 +1,18 @@
+import CartWidget from "./CartWidget"
 
 
 const Nav = (tipo) => {
     if(tipo.type === "header"){
         return(
             <nav>
-                <a href="#bombas">Bombas</a>
-                <a href="#herramientas">Herramientas</a>
-                <a href="#cañerias">Cañerias</a>
+                <div>
+                    <a href="#bombas">Bombas</a>
+                    <a href="#herramientas">Herramientas</a>
+                    <a href="#cañerias">Cañerias</a>
+                </div>
+                <div className="cart">
+                    <CartWidget/>
+                </div>
             </nav>
             )
             } else {
