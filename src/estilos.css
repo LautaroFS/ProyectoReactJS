@@ -31,6 +31,8 @@ header nav div a {
     color: black;
 }
 
+/* ---------------------------------- BODY ---------------------------------- */
+
 .cart{
     margin: 1.5rem;
 }
@@ -96,6 +98,17 @@ main div {
     border: 1px solid black;
     border-radius: 2px;
     color: white;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario input{
+    margin: 0.25rem;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */

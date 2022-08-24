@@ -1,12 +1,13 @@
 import Contador from "../../Contador"
-import { useContext, useState } from "react"
-import { contexto } from "../../CustomProvider"
+import { useState } from "react"
+import { useCarrito } from "../../CustomProvider"
 
 
 const ItemDetail = ({products}) =>{
 
     const [contadorPadre, setEstadoPadre] = useState(0)
-    const { sumarProductos } = useContext(contexto)
+    const { sumarProductos } = useCarrito()
+    const [qty ,setQty] = useState(1)
 
     const sumaCarrito = (param) => {
       setEstadoPadre(param)
@@ -14,8 +15,7 @@ const ItemDetail = ({products}) =>{
 
     const onAdd = (contador) =>{
         products.cantidad = contador
-        sumarProductos(products)
-
+        sumarProductos(products, qty)
     }
 
 

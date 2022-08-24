@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom"
-import { useContext } from "react"
-import { contexto } from "./CustomProvider"
+import { useCarrito } from "./CustomProvider"
 
 const CartWidget = () =>{
 
-    const {cantidad} = useContext(contexto)
+    const {cantidad} = useCarrito()
 
     return(
                 <Link className="cart1" to="/carrito">

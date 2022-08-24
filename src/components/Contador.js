@@ -25,7 +25,7 @@ const Contador = (props) =>{
     return(
         <>
             <p>Cantidad: {contadorHijo}</p>
-            <Button className="btn" onClick={sumar}>+</Button>
+            <Button className="btn" onClick={contadorHijo < props.stock ? sumar : () =>{alert("No hay mas unidades de las que se aparecen ahi.")}}>+</Button>
             <Button className="btn" onClick={restar}>-</Button>
             <Button className="btn" onClick={confirmar}>Confirmar.</Button>
         </>
