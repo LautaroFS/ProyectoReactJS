@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import productoBaseDeDatos from "../Productos"
 import ItemDetail from "./ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
-import {customFetch, customFetch1} from "../CustomFetch";
+import {customFetch} from "../CustomFetch";
 
 const ItemDetailContainer = ({sumaCarrito}) => {
 

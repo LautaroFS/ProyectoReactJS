@@ -43,11 +43,11 @@ const CustomProvider = (props) =>{
     }
 
     const getItemQty = () =>{
-        return cart.reduce((acc, x)=> acc += x.cant, 0)
+        return cart.reduce((acc, x)=> acc += x.qty, 0)
     }
 
     const getItemPrice = () =>{
-        return cart.reduce((acc, x) => acc += x.cant * x.precio, 0)
+        return cart.reduce((acc, x) => acc += x.qty * x.precio, 0)
     }
 
 
