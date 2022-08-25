@@ -1,31 +1,29 @@
-import {useState} from "react"; 
 import { Button } from "react-bootstrap";
 
 const Contador = (props) =>{
     
-    const [contadorHijo, setContadorHijo] = useState(props.initial)
 
      const sumar = () =>{
-        if(contadorHijo<props.stock){
-            setContadorHijo(contadorHijo+1)
+        if(props.contadorPadre<props.stock){
+            props.setEstadoPadre(props.contadorPadre+1)
         }
     }
     
     const restar = () =>{
-        if(contadorHijo>props.initial){
-            setContadorHijo(contadorHijo-1)
+        if(props.contadorPadre>props.initial){
+            props.setEstadoPadre(props.contadorPadre-1)
         }
     }
 
     const confirmar = () =>{
-        props.sumaCarrito(contadorHijo)
-        setContadorHijo(0)
-        props.onAdd(contadorHijo)
+        props.sumaCarrito(props.contadorPadre)
+        props.setEstadoPadre(0)
+        props.onAdd( props.contadorPadre)
     }
     return(
         <>
-            <p>Cantidad: {contadorHijo}</p>
-            <Button className="btn" onClick={contadorHijo < props.stock ? sumar : () =>{alert("No hay mas unidades de las que se aparecen ahi.")}}>+</Button>
+            <p>Cantidad: {props.contadorPadre}</p>
+            <Button className="btn" onClick={props.contadorPadre < props.stock ? sumar : () =>{alert("No hay mas unidades de las que se aparecen ahi.")}}>+</Button>
             <Button className="btn" onClick={restar}>-</Button>
             <Button className="btn" onClick={confirmar}>Confirmar.</Button>
         </>

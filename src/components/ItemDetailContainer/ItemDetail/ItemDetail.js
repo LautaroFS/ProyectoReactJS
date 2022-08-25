@@ -15,7 +15,7 @@ const ItemDetail = ({products}) =>{
 
     const onAdd = (contador) =>{
         products.cantidad = contador
-        sumarProductos(products, qty)
+        sumarProductos(products, contadorPadre)
         isInCart(products.id)
     }
 
@@ -27,7 +27,7 @@ const ItemDetail = ({products}) =>{
             <p>{products.descripcion}</p>
             <p>{products.precio}</p>
             <Contador onAdd={onAdd} initial={0} stock={products.stock} 
-            contadorPadre={contadorPadre} sumaCarrito={sumaCarrito} qty={qty} setQty={setQty} />
+            contadorPadre={contadorPadre} setEstadoPadre={setEstadoPadre} sumaCarrito={sumaCarrito} qty={qty} setQty={setQty} />
         </div>
     )
 }

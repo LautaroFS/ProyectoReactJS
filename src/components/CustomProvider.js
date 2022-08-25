@@ -1,10 +1,10 @@
 import { createContext, useContext, useState } from "react"
 
 export const CartContext = createContext()
-const {Provider} = CartContext
+const { Provider } = CartContext
 
 export const useCarrito = () => {
-    return useContext(CartContext) 
+    return useContext(CartContext)
 } 
 
 const CustomProvider = (props) =>{
@@ -13,17 +13,17 @@ const CustomProvider = (props) =>{
     const [cart, setCart] = useState([])
 
 
-    const sumarProductos = (produc , item, qty) =>{
+    const sumarProductos = (produc , item, contadorPadre) =>{
         setCantidad(cantidad + produc.cantidad);
         const newItem = {
             ...item,
-            qty
+            contadorPadre
         }
         if(isInCart(newItem.id)){
             const findProducts = cart.find(x => x.id === newItem.id)
             const productsIndex = cart.indexOf(findProducts)
             const auxArray = [...cart]
-            auxArray[productsIndex].qty += qty
+            auxArray[productsIndex].contadorPadre += contadorPadre
             setCart(auxArray)
         } else{
             setCart([...cart, newItem])
@@ -43,17 +43,17 @@ const CustomProvider = (props) =>{
     }
 
     const getItemQty = () =>{
-        return cart.reduce((acc, x)=> acc += x.qty, 0)
+        return cart.reduce((acc, x)=> acc += x.contadorPadre, 0)
     }
 
     const getItemPrice = () =>{
-        return cart.reduce((acc, x) => acc += x.qty * x.precio, 0)
+        return cart.reduce((acc, x) => acc += x.contadorPadre * x.precio, 0)
     }
 
 
     const valorContexto = {
         cantidad : cantidad,
-        carrito : cart,
+        cart,
         sumarProductos,
         restarProductos,
         isInCart,

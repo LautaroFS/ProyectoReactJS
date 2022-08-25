@@ -5,7 +5,7 @@ import { CartContext } from "./CustomProvider"
 const Carrito = () => {
 
     const {cart} = useContext(CartContext)
-    
+    console.log(cart)
     if( cart.length > 0){
         return(
             <div>
