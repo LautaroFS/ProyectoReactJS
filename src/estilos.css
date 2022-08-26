@@ -111,6 +111,14 @@ main div {
     margin: 0.25rem;
 }
 
+.carrito div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer{

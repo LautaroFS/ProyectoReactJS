@@ -6,7 +6,6 @@ import { CartContext, } from "../../CustomProvider"
 const ItemDetail = ({products}) =>{
 
     const [contadorPadre, setEstadoPadre] = useState(0)
-    const [qty ,setQty] = useState(1)
     const {isInCart, sumarProductos} = useContext(CartContext)
 
     const sumaCarrito = (param) => {
@@ -27,7 +26,7 @@ const ItemDetail = ({products}) =>{
             <p>{products.descripcion}</p>
             <p>{products.precio}</p>
             <Contador onAdd={onAdd} initial={0} stock={products.stock} 
-            contadorPadre={contadorPadre} setEstadoPadre={setEstadoPadre} sumaCarrito={sumaCarrito} qty={qty} setQty={setQty} />
+            contadorPadre={contadorPadre} setEstadoPadre={setEstadoPadre} sumaCarrito={sumaCarrito} />
         </div>
     )
 }

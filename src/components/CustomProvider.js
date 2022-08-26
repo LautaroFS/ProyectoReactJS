@@ -13,8 +13,8 @@ const CustomProvider = (props) =>{
     const [cart, setCart] = useState([])
 
 
-    const sumarProductos = (produc , item, contadorPadre) =>{
-        setCantidad(cantidad + produc.cantidad);
+    const sumarProductos = ( item, contadorPadre) =>{
+        setCantidad(cantidad + item.cantidad);
         const newItem = {
             ...item,
             contadorPadre
@@ -47,7 +47,7 @@ const CustomProvider = (props) =>{
     }
 
     const getItemPrice = () =>{
-        return cart.reduce((acc, x) => acc += x.contadorPadre * x.precio, 0)
+        return cart.reduce((acc, x) => acc += (x.cantidad * x.precio), 0)
     }
 
 

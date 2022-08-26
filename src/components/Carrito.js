@@ -4,21 +4,25 @@ import { CartContext } from "./CustomProvider"
 
 const Carrito = () => {
 
+   
     const {cart} = useContext(CartContext)
+    
     console.log(cart)
+    
     if( cart.length > 0){
         return(
             <div>
                 {
-                    cart.map((element, index) => {
-                        return <div key={index} >
+                    cart.map((product, index) => {
+                        return <div key={index} className="carrito" >
                             <div>
-                                <img src={element.imagen} alt={element.nombre} />
+                                <img src={product.imagen} className="imagenes" alt={product.nombre} />
+                                <h3>{product.nombre}</h3>
+                                <h3>Precio: ${product.precio} </h3>
+                                <h3>Unidades: {product.contadorPadre} </h3>
                             </div>
                             <div>
-                                <h3>{element.nombre}</h3>
-                                <h3>Precio: ${element.precio} </h3>
-                                <h3>Unidades: {element.qty} </h3>
+                                <Formulario/>
                             </div>
                         </div>
                     } )
@@ -33,7 +37,6 @@ const Carrito = () => {
                 <h3>Carrito:</h3>
 
             </div>
-           <Formulario/>
         </>
     )
 }
