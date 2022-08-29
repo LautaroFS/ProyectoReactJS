@@ -3,7 +3,7 @@ import Header from "./Header"
 import Main from "./Main"
 import { BrowserRouter } from "react-router-dom"
 import CustomProvider from "./CustomProvider"
-
+import "../Firebase"
 
 const App = () => {  
     

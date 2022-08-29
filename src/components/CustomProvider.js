@@ -62,7 +62,7 @@ const CustomProvider = (props) =>{
         getItemQty
 
     }
-    console.log(cart)
+
     return(
         <Provider value={valorContexto}>
             {props.children}

@@ -1,36 +1,46 @@
 import ItemList from "./ItemList/ItemsList"
 import { useEffect, useState } from "react"
-import productoBaseDeDatos from "../Productos"
+
+/* ------------------------------ BASE DE DATOS ----------------------------- */
+import {db} from "../../Firebase"
+import { collection, getDocs } from "firebase/firestore"
+
+/* ----------------------------------------------------------------------- */
 
 const ItemListContainer = () => {
-
+    
     const [productos,setProductos] = useState([])
-    const [cargando , setCargando] = useState(true)
-
+    
     useEffect(()=> {
-        const peticion = new Promise((resolve, reject) => {
-            setTimeout(()=>{
-                resolve(productoBaseDeDatos)
-            },1500)
+        
+        const productosCollection = collection(db, "Productos")
+        const consulta = getDocs(productosCollection)
+       
+        consulta
+        .then(snapshot=>{
+            const productos = snapshot.docs.map(doc=>{
+                return{
+                    ...doc.data(),
+                    id: doc.id
+                }
+            })
+            setProductos(productos)
         })
-        peticion.then((correcto)=>{
-            setProductos(correcto)
-            setCargando(false)
+        .catch(err=>{
+            console.log(err)
         })
-        peticion.catch((error)=>{
 
-        })
-    },[])
+    
+     },[])
 
-    if(cargando){
-        return(
-        <h3>Cargando...</h3>
-        )
-    }else{
+    if(productos){
         return(
            <ItemList productos={productos}/>
         )
-    }
-}
+    }else{
+        return(
+        <h3>Cargando...</h3>
+        )
+    }}
 
 export default ItemListContainer

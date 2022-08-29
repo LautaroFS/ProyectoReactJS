@@ -1,31 +1,36 @@
 import { useState, useEffect } from "react";
-import productoBaseDeDatos from "../Productos"
 import ItemDetail from "./ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
-import {customFetch} from "../CustomFetch";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../Firebase";
 
 const ItemDetailContainer = ({sumaCarrito}) => {
 
-    const r = useParams()
+    const {id} = useParams()
     const [products, setProduct] = useState({})
-    const [carga, setCarga] = useState(true)
 
     useEffect(()=>{
-        setCarga(true)
-        customFetch(productoBaseDeDatos)
-        .then(res=>{
-            setCarga(false)
-            setProduct(res.find(products => r.id == products.id))
-        })
-    },[r.id])
+         const productosCollection = collection(db, "Productos")
+         const referencia = doc(productosCollection,id)
+         const pedido = getDoc(referencia)
 
-    if(carga){
+         pedido
+         .then((res)=>{
+            setProduct(res.data())
+        })
+        .catch((err)=>{
+            
+        })
+        console.log(productosCollection)
+    },[id])
+
+    if(products){
         return(
-            <h3>Cargando...</h3>
+        <ItemDetail products={products}/>
         )
     }else{
         return(
-        <ItemDetail products={products}/>
+            <h3>Cargando...</h3>
         )
     }
 }
