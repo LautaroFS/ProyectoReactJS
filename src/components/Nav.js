@@ -11,7 +11,7 @@ const Nav = (tipo) => {
                     <a href="#cañerias">Cañerias</a>
                 </div>
                 <div className="cart">
-                    <CartWidget/>
+                    <CartWidget />
                 </div>
             </nav>
             )

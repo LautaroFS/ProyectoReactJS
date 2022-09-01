@@ -1,6 +1,7 @@
 import Contador from "../../Contador"
 import { useContext, useState } from "react"
 import { CartContext, } from "../../CustomProvider"
+import { toast } from "react-toastify"
 
 
 const ItemDetail = ({products}) =>{
@@ -16,6 +17,7 @@ const ItemDetail = ({products}) =>{
         products.cantidad = contador
         sumarProductos(products, contadorPadre)
         isInCart(products.id)
+        toast.success("¡Producto agregado correctamente!")
     }
 
 

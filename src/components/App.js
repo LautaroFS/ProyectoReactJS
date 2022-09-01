@@ -4,6 +4,8 @@ import Main from "./Main"
 import { BrowserRouter } from "react-router-dom"
 import CustomProvider from "./CustomProvider"
 import "../Firebase"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const App = () => {  
     
@@ -13,6 +15,7 @@ const App = () => {
                 <Header greeting1="Santiago"/>
                 <Main/>
                 <Footer type="footer"/> 
+                <ToastContainer/>
             </CustomProvider>
         </BrowserRouter>
     )

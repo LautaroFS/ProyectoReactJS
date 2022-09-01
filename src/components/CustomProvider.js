@@ -4,7 +4,8 @@ export const CartContext = createContext()
 const { Provider } = CartContext
 
 export const useCarrito = () => {
-    return useContext(CartContext)
+    const valor_del_contexto = useContext(CartContext)
+    return valor_del_contexto 
 } 
 
 const CustomProvider = (props) =>{
@@ -43,7 +44,8 @@ const CustomProvider = (props) =>{
     }
 
     const getItemQty = () =>{
-        return cart.reduce((acc, x)=> acc += x.contadorPadre, 0)
+        const total = cart.reduce((acc, x)=> acc += x.contadorPadre, 0)
+        return total
     }
 
     const getItemPrice = () =>{
