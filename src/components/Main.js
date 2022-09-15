@@ -7,11 +7,10 @@ const Main = () => {
     return(
         <main className="general">
             <Routes>
-                <Route path="/" element={<ItemListContainer/>}/>
-                <Route path="/detalle" element={<ItemDetailContainer/>}/>
-                <Route path="/detalle/:id" element={<ItemDetailContainer/>}/> 
-                <Route path="./detalle/categoria" element={<ItemDetailContainer/>}/>
-                <Route path="/carrito" element={<Carrito/>}/>
+                <Route path="/" element={<ItemListContainer />}/>
+                <Route path="/detalle/:id" element={<ItemDetailContainer />}/>
+                <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
+                <Route path="/carrito" element={<Carrito />}/>
             </Routes>
         </main>
     )

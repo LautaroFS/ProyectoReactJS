@@ -8,9 +8,9 @@ const ItemDetail = ({products}) =>{
 
     const [contadorPadre, setEstadoPadre] = useState(0)
     const {isInCart, sumarProductos} = useContext(CartContext)
-
+    
     const sumaCarrito = (param) => {
-      setEstadoPadre(param)
+        setEstadoPadre(param)
     }
 
     const onAdd = (contador) =>{

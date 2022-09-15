@@ -6,7 +6,7 @@ import {toast} from "react-toastify"
 
 const Carrito = (props) => {
 
-    const {cart} = useContext(CartContext)
+    const {cart, restarProductos} = useContext(CartContext)
 
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState ("")
@@ -75,6 +75,7 @@ const Carrito = (props) => {
                                 <h3>{product.nombre}</h3>
                                 <h3>Precio: ${product.precio} </h3>
                                 <h3>Unidades: {product.contadorPadre} </h3>
+                                <button className="btn" onClick={()=>restarProductos(product.id)} >VACIAR CARRITO</button>
                             </div>
                             <div className="formulario">
                                 <h3>DATOS DE ENVIO:</h3>

@@ -4,24 +4,24 @@ import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../Firebase";
 
-const ItemDetailContainer = ({sumaCarrito}) => {
+const ItemDetailContainer = () => {
 
     const {id} = useParams()
     const [products, setProduct] = useState({})
 
     useEffect(()=>{
-         const productosCollection = collection(db, "Productos")
-         const referencia = doc(productosCollection,id)
-         const pedido = getDoc(referencia)
+        
+        const productosCollection = collection(db, "Productos")
+        const referencia = doc(productosCollection,id)
+        const pedido = getDoc(referencia)
 
-         pedido
-         .then((res)=>{
+        pedido
+        .then((res)=>{
             setProduct(res.data())
         })
         .catch((err)=>{
             
         })
-        console.log(productosCollection)
     },[id])
 
     if(products){
@@ -30,7 +30,7 @@ const ItemDetailContainer = ({sumaCarrito}) => {
         )
     }else{
         return(
-            <h3>Cargando...</h3>
+            <h3>ERROR</h3>
         )
     }
 }

@@ -3,9 +3,9 @@ import Item from "./Item/Item"
 const ItemList = ({productos}) =>{
     return(
         <section>
-            {productos.map((producto, prod) => {
-                return <Item producto = {producto} key={prod} />
-            })}
+            {
+        productos.map(producto=> <Item key={producto.id} producto= {producto}/>)
+        }
         </section>
     )
 }

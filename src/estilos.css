@@ -24,10 +24,14 @@ header nav {
     margin-bottom: 2rem;
 }
 
-header nav div a {
+header nav a {
     align-items: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    color: black;
+}
+
+.titulo{
     color: black;
 }
 

@@ -49,7 +49,9 @@ const CustomProvider = (props) =>{
     }
 
     const getItemPrice = () =>{
-        return cart.reduce((acc, x) => acc += (x.cantidad * x.precio), 0)
+        const precioTotal = cart.reduce((acc, x) => acc += (x.contadorPadre * x.precio), 0)
+        return precioTotal,
+        console.log(precioTotal)
     }
 
 
