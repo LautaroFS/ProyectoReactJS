@@ -4,9 +4,9 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from "../Firebase"
 import {toast} from "react-toastify"
 
-const Carrito = (props) => {
+const Carrito = () => {
 
-    const {cart, restarProductos} = useContext(CartContext)
+    const {cart, emptyCart} = useContext(CartContext)
 
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState ("")
@@ -73,9 +73,9 @@ const Carrito = (props) => {
                             <div>
                                 <img src={product.imagen} className="imagenes" alt={product.nombre} />
                                 <h3>{product.nombre}</h3>
-                                <h3>Precio: ${product.precio} </h3>
+                                <h3>Precio Unitario: ${product.precio} </h3>
                                 <h3>Unidades: {product.contadorPadre} </h3>
-                                <button className="btn" onClick={()=>restarProductos(product.id)} >VACIAR CARRITO</button>
+                                <button className="btn" onClick={()=>emptyCart()} >VACIAR CARRITO</button>
                             </div>
                             <div className="formulario">
                                 <h3>DATOS DE ENVIO:</h3>

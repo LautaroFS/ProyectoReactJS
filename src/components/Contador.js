@@ -2,8 +2,9 @@ import { Button } from "react-bootstrap";
 
 const Contador = (props) =>{
     
-
-     const sumar = () =>{
+    
+    
+    const sumar = () =>{
         if(props.contadorPadre<props.stock){
             props.setEstadoPadre(props.contadorPadre+1)
         }
